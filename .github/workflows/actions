@@ -1,0 +1,13 @@
+name: workflow-servicios
+on:
+  push:
+    branches:
+      - master
+jobs:
+  trabajo1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: listar archivos
+        run: ls -la

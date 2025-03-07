@@ -1,0 +1,18 @@
+
+
+
+
+
+<% if @product.present? %> 
+  <h2>Product Edition</h2>
+  <%= render "form", product: @product %>
+  <br>
+  <div>
+    <%= link_to "Show this product", @product %> |
+    <%= link_to "Back to products", products_path %>
+  </div>
+<% else %>
+  <p style="color:red">Product no registered</p>
+  <%= link_to "Back to products", products_path %>
+<% end %>
+
